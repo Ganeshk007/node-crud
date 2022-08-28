@@ -1,0 +1,55 @@
+<div class="content ">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 mx-auto">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Add User</h4>
+                </div>
+                <div class="card-body">
+                    <div class="col-sm-12 col-md-12 col-lg-12 mx-auto">
+
+                        <form method="POST" action="<%=`/user`%>" autocomplete="off">
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group text-left">
+                                        <label for="firstName">First Name <span class="star_danger">*</span></label>
+                                        <input id="firstName" type="text" class="form-control" name="firstName" required>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group text-left">
+                                        <label for="lastName">Last Name <span class="star_danger">*</span></label>
+                                        <input id="lastName" type="text" class="form-control" name="lastName" required>
+                                    </div>
+                                </div>                                
+                            </div>
+
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group text-left">
+                                        <label for="email">E-Mail Address <span class="star_danger">*</span></label>
+                                        <input id="email" type="email" class="form-control" name="email" required>      
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group text-left">
+                                        <label for="phone">Phone <span class="star_danger">*</span></label>
+                                        <input id="phone" type="number" class="form-control" name="phone" required>      
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="form-group text-center">
+                                <button type="submit" class="btn btn-block btn-primary">
+                                    Save
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

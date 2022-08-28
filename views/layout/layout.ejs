@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Node CRUD</title>
+    
+    <!-- App css -->
+    <link rel="stylesheet" href="/assets/css/bundle.min.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/app.min.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/style.min.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/responsive.min.css" type="text/css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
+</head>
+<body class="horizontal-navigation">
+
+<!-- Layout wrapper -->
+<div class="layout-wrapper">
+    <!-- begin::Header -->
+    <%- include('./header.ejs') %>
+    <!-- end::Header -->
+
+    <!-- Content wrapper -->
+    <div class="content-wrapper">
+
+        <!-- begin::navigation -->
+        <%- include('./navigation.ejs') %>
+        <!-- end::navigation -->
+
+        <!-- Content body -->
+        <div class="content-body">
+            <!-- Content -->
+            <%- body %>
+            <!-- ./ Content -->
+
+            <!-- begin::Footer -->
+            <%- include('./footer.ejs') %>
+            <!-- end::Footer -->
+        </div>
+        <!-- ./ Content body -->
+    </div>
+    <!-- ./ Content wrapper -->
+</div>
+<!-- ./ Layout wrapper -->
+
+<!-- Main scripts -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- <script src="/assets/js/bundle.min.js"></script> -->
+<script src="/assets/js/app.min.js"></script>
+<script src="/assets/js/common.min.js"></script>
+</body>
+</html>
