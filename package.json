@@ -4,7 +4,10 @@
   "description": "Basic CRUD operations",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec babel-node src/app",
+    "build": "babel src -d build",
+    "start": "npm run build && node build/app"
   },
   "repository": {
     "type": "git",
@@ -26,5 +29,12 @@
     "method-override": "^3.0.0",
     "mongodb": "^4.9.0",
     "mongoose": "^6.5.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.19.0",
+    "@babel/node": "^7.18.10",
+    "@babel/preset-env": "^7.19.0",
+    "babel-plugin-module-resolver": "^4.1.0"
   }
 }

@@ -1,11 +1,11 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const dbConfig = require('./config/database.config.js');
-const UserRoute = require('./app/routes/user')
-const mongoose = require('mongoose');
-const EJSLayout = require('express-ejs-layouts');
-const methodOverride = require('method-override');
-const cookieParser = require('cookie-parser');
+import express from 'express';
+import bodyParser from 'body-parser';
+import dbConfig from './config/database.config.js';
+import UserRoute from './app/routes/user'
+import mongoose from 'mongoose';
+import EJSLayout from 'express-ejs-layouts';
+import methodOverride from 'method-override';
+import cookieParser from 'cookie-parser';
 
 
 const app = express();
@@ -13,9 +13,10 @@ app.use(methodOverride('_method'));
 app.use(cookieParser());
 
 app.set('view engine', 'ejs');
+app.set('views','./src/views');
 app.use(EJSLayout);
 app.set('layout', './layout/layout');
-app.use(express.static('public'));
+app.use(express.static('src/public'));
 
 const jsonParser = bodyParser.json();
 const urlencodedParser = bodyParser.urlencoded({ extended: false });

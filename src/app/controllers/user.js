@@ -1,4 +1,4 @@
-const UserModel = require('../models/user')
+import UserModel from 'app/models/user'
 
 // Create and Save a new user
 exports.create = async (req, res) => {

@@ -1,4 +1,4 @@
-var mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 var schema = new mongoose.Schema({
     email: {
@@ -6,11 +6,7 @@ var schema = new mongoose.Schema({
         required: true,
         unique: true
     },
-    firstName: {
-        type: String,
-        default: ''
-    },
-    lastName: {
+    name: {
         type: String,
         default: ''
     },
