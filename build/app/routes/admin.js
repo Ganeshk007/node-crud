@@ -1,10 +1,13 @@
 "use strict";
 
-var express = require('express');
+var _express = _interopRequireDefault(require("express"));
 
-var AdminLoginController = require("../controllers/admin/login");
+var _login = _interopRequireDefault(require("app/controllers/admin/login"));
 
-var router = express.Router();
-router.get('/login', AdminLoginController.findAll);
-router.post('/login', AdminLoginController.create);
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var router = _express["default"].Router();
+
+router.get('/login', _login["default"].findAll);
+router.post('/login', _login["default"].create);
 module.exports = router;

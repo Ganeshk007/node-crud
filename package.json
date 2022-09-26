@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --exec babel-node src/app",
+    "dev": "nodemon --exec ./node_modules/.bin/babel-node src/app",
     "build": "babel src -d build",
     "start": "npm run build && node build/app"
   },
@@ -26,6 +26,7 @@
     "ejs": "^3.1.8",
     "express": "^4.18.1",
     "express-ejs-layouts": "^2.5.1",
+    "joi": "^17.6.0",
     "method-override": "^3.0.0",
     "mongodb": "^4.9.0",
     "mongoose": "^6.5.3"
@@ -33,7 +34,7 @@
   "devDependencies": {
     "@babel/cli": "^7.18.10",
     "@babel/core": "^7.19.0",
-    "@babel/node": "^7.18.10",
+    "@babel/node": "^7.19.1",
     "@babel/preset-env": "^7.19.0",
     "babel-plugin-module-resolver": "^4.1.0"
   }

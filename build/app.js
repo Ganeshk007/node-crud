@@ -42,10 +42,7 @@ _mongoose["default"].connect(_databaseConfig["default"].url, {
 })["catch"](function (err) {
   console.log('Could not connect to the database', err);
   process.exit();
-}); // app.use('/', (req, res) => {
-//     res.send("hhs");
-// });
-
+});
 
 app.use('/user', urlencodedParser, _user["default"]);
 app.listen(3000, function () {

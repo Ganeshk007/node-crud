@@ -6,6 +6,13 @@
                     <h4 class="card-title">Add User</h4>
                 </div>
                 <div class="card-body">
+                    <% if ( message ) { %>
+                        <div id="message">
+                            <p class="alert alert-danger" style="margin-top: 20px;">
+                                <%= message %>
+                            </p>
+                        </div>
+                    <% } %>
                     <div class="col-sm-12 col-md-12 col-lg-12 mx-auto">
 
                         <form method="POST" action="<%=`/user`%>" autocomplete="off">

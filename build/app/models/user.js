@@ -1,8 +1,10 @@
 "use strict";
 
-var mongoose = require('mongoose');
+var _mongoose = _interopRequireDefault(require("mongoose"));
 
-var schema = new mongoose.Schema({
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var schema = new _mongoose["default"].Schema({
   email: {
     type: String,
     required: true,
@@ -18,5 +20,5 @@ var schema = new mongoose.Schema({
   },
   phone: String
 });
-var user = new mongoose.model('user', schema);
+var user = new _mongoose["default"].model('user', schema);
 module.exports = user;
